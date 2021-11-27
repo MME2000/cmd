@@ -8,7 +8,7 @@ class loginAdmin
 
     public static function dbConnect()
     {
-        self::$con = DataBase::rconnect();
+        self::$con = DataBase::connect();
         mysqli_set_charset(self::$con,'utf8');
     }
 
@@ -21,6 +21,7 @@ class loginAdmin
 
     public static function insertUser($username,$password)
     {
-        self::dbConnect(self::$con,"insert into login user_name , password VALUES $username , $password)");
+        self::dbConnect();
+        mysqli_query(self::$con,"insert into login (user_name,password) VALUES ('$username','$password')");
     }
 }
