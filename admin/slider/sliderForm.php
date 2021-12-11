@@ -71,40 +71,32 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<?php require_once 'header.php'; ?>
-
+<?php require_once '../header.php'; ?>
+<h1 style="text-align: center;">slider</h1>
 <div class="container">
-  <form action="../admin/seo/insertSeo.php" method="POST">
+  <form action="insertSlider.php" method="POST" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
-      <label for="fname">title</label>
+      <label for="fname">image</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="title" placeholder="Your title..">
+      <input type="file" id="fname" name="image">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="lname">author</label>
+      <label for="lname">caption</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="author" placeholder="Your author..">
+      <input type="text" id="lname" name="caption" placeholder="Your caption..">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="subject">description</label>
+      <label for="lname">link</label>
     </div>
     <div class="col-75">
-      <textarea id="subject" name="description" placeholder="Write description..." style="height:200px"></textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">keywords</label>
-    </div>
-    <div class="col-75">
-      <textarea id="subject" name="keywords" placeholder="Write keywords..." style="height:200px"></textarea>
+      <input type="text" id="lname" name="link" placeholder="Your link..">
     </div>
   </div>
   <br>
